@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <nav-header class="title">
+            <h1>Expense Tracker</h1>
+        </nav-header>
+
+        <nav-bar class="nav-menu">
+            <a class="active" href="index.html">Add Expense</a>
+            <a class="menu" href="list.html">Expenses List</a>
+            <a class="menu" href="target.html">Set Target</a>
+        </nav-bar>
+    </nav>
+
+    <section class="content">
+        <h2>Oh, where did ur money go?</h2>
+        <form id="expense-form">
+            <label for="description">Category:</label>
+            <select id="description" name="description" required>
+                <option value="">Select a category</option>
+                <option value="Food">Makanan</option>
+                <option value="Drink">Minuman</option>
+                <option value="Transport">Transportasi</option>
+                <option value="Entertainment">Hiburan</option>
+                <option value="Health">Kesehatan</option>
+                <option value="Education">Pendidikan</option>
+                <option value="Shopping">Belanja</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+            <label for="note">Abis beli apa?</label>
+            <input type="text" id="note" name="note" required>
+            <br>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+    <script src="../javascript/script.js"></script>
+    <footer>
+        <p>&copy; 2026 Expense Tracker. Made with love & tears by Kiara</p>
+    </footer>
+</body>
+</html>
