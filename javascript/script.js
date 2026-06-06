@@ -13,6 +13,6 @@ document.getElementById('expense-form').addEventListener('submit', function(e) {
     expenses.push(expense)
     localStorage.setItem('expenses', JSON.stringify(expenses))
 
-    alert('Tercatat. Semoga ini yang terakhir hari ini 🙏')
+    alert('Tercatat. Semoga ini yang terakhir hari ini ya! 🙏')
     this.reset()
 })

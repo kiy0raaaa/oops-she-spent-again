@@ -8,8 +8,8 @@
 </head>
 <body>
     <nav>
-        <nav-header class="title">
-            <h1>Oops, She Spent Again</h1>
+        <nav-header>
+            <img src="../assets/title.png" alt="Oops, She Spent Again" class="title">
         </nav-header>
 
         <nav-bar class="nav-menu">
@@ -20,9 +20,66 @@
     </nav>
 
     <section class="content">
-        <
+        <div class="bg-decor" aria-hidden="true">
+            <span class="star s1">✦</span>
+            <span class="star s2">✧</span>
+            <span class="star s3">✦</span>
+            <span class="star s4">✧</span>
+            <span class="star s5">✦</span>
+            <span class="star s6">✧</span>
+            <span class="star s7">✦</span>
+            <span class="star s8">✧</span>
+            <span class="star s9">✦</span>
+            <span class="star s10">✧</span>
+            <span class="star s11">✦</span>
+            <span class="star s12">✧</span>
+            <span class="star s13">✦</span>
+            <span class="star s14">✧</span>
+            <span class="star s15">✦</span>
+            <span class="star s16">✧</span>
+            <span class="star s17">✦</span>
+            <span class="star s18">✧</span>
+            <span class="star s19">✦</span>
+            <span class="star s20">✧</span>
+        </div>
+        <div class="page-title">
+            <h2>Set your monthly spending target:</h2>
+        </div>
+        <div class="page-grid">
+            <div class="form-panel">
+                <div class="form-card">
+                    <p class="form-subtitle">Sebulan mau brp?</p>
+                    <form id="target-form">
+                        <input type="hidden" id="edit-key" value="">
+                        <label for="target-category">Kategori:</label>
+                        <select id="target-category" required>
+                            <option value="">Pilih kategori...</option>
+                            <option value="Food">Makanan</option>
+                            <option value="Drink">Minuman</option>
+                            <option value="Transport">Transportasi</option>
+                            <option value="Entertainment">Hiburan</option>
+                            <option value="Health">Kesehatan</option>
+                            <option value="Education">Pendidikan</option>
+                            <option value="Shopping">Belanja</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label for="target-amount">Budget (Rp):</label>
+                        <input type="number" id="target-amount" placeholder="Berapa yang boleh keluar?" required>
+                        <button type="submit" id="submit-btn">Add Target</button>
+                    </form>
+                </div>
+            </div>
+            <div class="list-panel">
+                <div class="list-card">
+                    <h3 class="list-card-title">Your Targets</h3>
+                    <div id="targets-display"></div>
+                </div>
+            </div>
+        </div>
     </section>
+    <script src="../javascript/target.js"></script>
+    <footer>
+        <p>&copy; 2026 Expense Tracker. Made with love & tears by Kiara</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; 2026 Expense Tracker. Built by Kiara.</p>
 </html>
