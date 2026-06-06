@@ -76,12 +76,14 @@ function renderExpenses(filter = '') {
             <span class="expense-category">${CATEGORIES[e.description] || e.description}</span>
         </div>
         <div class="expense-right">
-            <span class="expense-amount">Rp ${Number(e.amount).toLocaleString('id-ID')}</span>
-            <span class="expense-date">${e.date}</span>
-        </div>
-        <div class="item-actions">
-            <button class="btn-edit-item" onclick="startEdit(${e.id})">✏️</button>
-            <button class="btn-delete-item" onclick="deleteExpense(${e.id})">🗑️</button>
+            <div class="expense-desc">
+                <span class="expense-amount">Rp ${Number(e.amount).toLocaleString('id-ID')}</span>
+                <span class="expense-date">${e.date}</span>
+            </div>
+            <div class="item-actions">
+                <button class="btn-edit-item" onclick="startEdit(${e.id})">✏️</button>
+                <button class="btn-delete-item" onclick="deleteExpense(${e.id})">🗑️</button>
+            </div>
         </div>
         </div>
     `).join('')
