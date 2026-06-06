@@ -8,7 +8,7 @@ function getExpenses() { return JSON.parse(localStorage.getItem('expenses') || '
 function getTargets()  { return JSON.parse(localStorage.getItem('targets')  || '{}') }
 
 function deleteExpense(id) {
-    if (!confirm('Hapus pengeluaran ini? 🗑️')) return
+    if (!confirm('Hapus pengeluaran ini?')) return
     const updated = getExpenses().filter(e => e.id !== id)
     localStorage.setItem('expenses', JSON.stringify(updated))
     renderExpenses(document.getElementById('filter-category').value)
@@ -34,7 +34,7 @@ function startEdit(id) {
             <input class="edit-field" id="edit-date-${id}"   type="date"   value="${e.date}">
         </div>
         <div class="edit-actions">
-            <button class="btn-save-edit"   onclick="saveEdit(${id})">💾 Simpan</button>
+            <button class="btn-save-edit"   onclick="saveEdit(${id})">Simpan</button>
             <button class="btn-cancel-edit" onclick="renderExpenses(document.getElementById('filter-category').value)">✕ Batal</button>
         </div>
         </div>
@@ -78,6 +78,10 @@ function renderExpenses(filter = '') {
         <div class="expense-right">
             <span class="expense-amount">Rp ${Number(e.amount).toLocaleString('id-ID')}</span>
             <span class="expense-date">${e.date}</span>
+        </div>
+        <div class="item-actions">
+            <button class="btn-edit-item" onclick="startEdit(${e.id})">✏️</button>
+            <button class="btn-delete-item" onclick="deleteExpense(${e.id})">🗑️</button>
         </div>
         </div>
     `).join('')

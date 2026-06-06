@@ -7,6 +7,8 @@
     --text: #3b0764;      /* violet-950 */
     --muted: #c4b5fd;     /* violet-300 */
     --card: rgba(254,251,255,0.88);
+    --border: #ddd6fe;
+    --text-soft: #7c3aed;
 }
 
 * {
@@ -19,7 +21,6 @@ body {
     background-color: var(--bg);
     color: var(--text);
     height: 100dvh;
-    overflow: hidden;
     width: 100%;
     flex: 1;
     min-height: 0;
