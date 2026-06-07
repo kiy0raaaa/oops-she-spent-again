@@ -11,6 +11,11 @@
     --text-soft: #7c3aed;
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 * {
     font-family:'playfair display', "nunito", sans-serif;
     margin: 0;
@@ -21,6 +26,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     height: 100dvh;
+    overflow:hidden;
     width: 100%;
     flex: 1;
     min-height: 0;
@@ -132,7 +138,8 @@ nav {
 section.content {
     background: linear-gradient(135deg, #f5f0ff 0%, #fff8f0 55%, #f0fff8 100%);
     background-attachment: fixed;
-    height: 80vh;
+    height: calc(100dvh - 190px);
+    overflow-y: auto;
     margin: 0;
     padding: 0;
     border-top: var(--text) solid 1px;
@@ -268,7 +275,7 @@ button[type="submit"].editing {
 
 .list-card-title {
     font-family: 'Playfair Display', serif;
-    font-style: italic; font-weight: 400;
+    font-style: italic; font-weight: bold;
     font-size: 1.1rem; color: var(--text-soft);
     margin-bottom: 16px;
     padding-bottom: 12px;

@@ -70,7 +70,7 @@ function renderExpenses(filter = '') {
     }
 
     el.innerHTML = filtered.map(e => `
-        <div class="expense-item">
+        <div class="expense-item" data-id="${e.id}">
         <div class="expense-left">
             <span class="expense-name">${e.note}</span>
             <span class="expense-category">${CATEGORIES[e.description] || e.description}</span>

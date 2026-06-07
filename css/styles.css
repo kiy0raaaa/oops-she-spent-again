@@ -11,6 +11,11 @@
     --text-soft: #7c3aed;
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 * {
     font-family:'playfair display', "nunito", sans-serif;
     margin: 0;
@@ -21,10 +26,10 @@ body {
     background-color: var(--bg);
     color: var(--text);
     height: 100dvh;
+    overflow:hidden;
     width: 100%;
-    flex: 1;
-    min-height: 0;
-    align-items: flex-start;
+    align-self: flex-start;
+    overflow-x: hidden;
 }
 
 .bg-decor {
@@ -33,6 +38,8 @@ body {
     pointer-events: none; /* biar nggak ganggu klik */
     z-index: -1;
     overflow: hidden;
+    align-items: stretch;
+    height: 100%;
 }
 
 .star {
@@ -131,7 +138,8 @@ nav {
 section.content {
     background: linear-gradient(135deg, #f5f0ff 0%, #fff8f0 55%, #f0fff8 100%);
     background-attachment: fixed;
-    height: 80vh;
+    height: calc(100dvh - 190px);
+    overflow-y: auto;
     margin: 0;
     padding: 0;
     border-top: var(--text) solid 1px;
@@ -142,7 +150,7 @@ section.content {
 
 .page-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding: 70px;
 }
@@ -150,10 +158,10 @@ section.content {
 .content h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    margin: 150px 20px 40px 20px;
-    text-align: center;
+    margin: 90px 20px 40px 20px;
+    text-align: left;
     justify-content: center;
     position: relative;
 }
