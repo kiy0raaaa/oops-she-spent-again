@@ -2,7 +2,7 @@
     --bg: #f5f0ff;        /* lavender-50 */
     --surface: #ede9fe;   /* lavender-100 */
     --accent: #a78bfa;    /* violet-400 */
-    --accent2: #fb923c;   /* peach/orange-400 */
+    --accent2: #fcd0ad;   /* peach/orange-400 */
     --accent3: #6ee7b7;   /* sage/emerald-300 */
     --text: #3b0764;      /* violet-950 */
     --muted: #c4b5fd;     /* violet-300 */
@@ -84,10 +84,11 @@ body {
 .s20 { font-size: 0.8rem; top: 97%; left: 50%; animation-delay: 2.6s; }
 
 nav {
-    background-color: var(--muted);
-    height: 190px;
+    background: url('../assets/purple.jpg') repeat;
+    background-size: 100% auto;
     position: relative;
     z-index: 100;
+    height: 190px;
 }
 
 .title {
@@ -431,6 +432,21 @@ footer {
 }
 
 .edit-field:focus { border-color: var(--accent); }
+
+input.edit-field {
+    width: 97%;
+    margin: auto;
+}
+
+.edit-field[type="date"] {
+    width: 89%;
+    margin-left: 23px;
+}
+
+input.edit-field[type="number"] {
+    width: 100%;
+    margin: auto;
+}
 
 select.edit-field {
     -webkit-appearance: none; appearance: none;
