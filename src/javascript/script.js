@@ -1,3 +1,21 @@
+function showToast(message, type = 'success') {
+    const existing = document.getElementById('toast')
+    if (existing) existing.remove()
+
+    const toast = document.createElement('div')
+    toast.id = 'toast'
+    toast.className = `toast toast-${type}`
+    toast.textContent = message
+    document.body.appendChild(toast)
+
+    requestAnimationFrame(() => toast.classList.add('toast-show'))
+
+    setTimeout(() => {
+        toast.classList.remove('toast-show')
+        setTimeout(() => toast.remove(), 300)
+    }, 3000)
+}
+
 document.getElementById('expense-form').addEventListener('submit', function(e) {
     e.preventDefault()
 
@@ -13,6 +31,6 @@ document.getElementById('expense-form').addEventListener('submit', function(e) {
     expenses.push(expense)
     localStorage.setItem('expenses', JSON.stringify(expenses))
 
-    alert('Tercatat. Semoga ini yang terakhir hari ini ya! 🙏')
+    showToast('Tercatat. Semoga ini yang terakhir hari ini ya!')
     this.reset()
 })
